@@ -1,0 +1,187 @@
+/* Reset default styles and apply some basic styling */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+}
+
+
+/* Navigation Menu */
+
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.horizontal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-list li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.horizontal-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.horizontal-list li a:hover {
+    color: #ffcc00;
+}
+
+
+/* Gradient Button Styles */
+
+.login-button {
+    position: relative;
+    top: 10px;
+    padding: 12px 35px;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    /* Adjust the text size */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    /* Gradient colors */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Box shadow for a 3D effect */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    /* Hover effect: Move the button slightly up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Main Content */
+
+main {
+    max-width: 1200px;
+    max-height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Notice and Events Section */
+
+#notice-container {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.news-upcoming-events {
+    position: relative;
+    top: -570px;
+    max-width: 50%;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.catagorie-list li a {
+    display: block;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.catagorie-list li a:hover {
+    background-color: #555;
+}
+
+.container1 {
+    display: block;
+    background-color: #333;
+    position: relative;
+    top: -20px;
+    left: 0px;
+    max-width: 50%;
+    height: 50px;
+}
+
+.container1 h1 {
+    display: block;
+    position: relative;
+    top: 20%;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.container2 {
+    display: block;
+    background-color: #333;
+    position: relative;
+    top: -70px;
+    left: 51%;
+    max-width: 49%;
+    height: 550px;
+    overflow: hidden;
+}
+
+#slideshow-image {
+    display: block;
+    object-fit: cover;
+    position: relative;
+    top: -10px;
+    left: 0px;
+    width: 102%;
+    /* Set width */
+    height: auto;
+    /* Maintain aspect ratio */
+    overflow: hidden;
+    /* Hide overflowing content */
+    transition: transform 0.3s ease;
+    /* Add smooth transition */
+    object-fit: cover;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

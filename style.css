@@ -1,0 +1,753 @@
+/* ===================
+    common
+   =================== */
+body {
+  font-family: 'Be Vietnam', sans-serif;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(236, 213, 213, 0.605)
+}
+
+.page-container {
+  position: relative;
+  min-height: 97.5vh;
+}
+
+.content-wrap {
+  padding-bottom: 2.5em;
+}
+
+.rect-circ {
+  border-radius: 1.25em;
+}
+
+.rect-round-sm {
+  border-radius: 0.5em;
+}
+
+.rect-round-bg {
+  border-radius: 16px;
+}
+
+.text-header {
+  display: flex;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.user-label {
+  width: 10em;
+  height: 2.5em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25em auto;
+  background: #8e898950;
+}
+
+.dept-label {
+  width: 32em;
+  margin: 1.25em auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dept-label span {
+  color: #bb5555;
+  font-weight: 600;
+}
+
+.user-info {
+  width: 20em;
+  margin: 2.5em auto;
+}
+
+.user-info span {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+}
+
+.user-info span:nth-of-type(2) {
+  margin-top: 1.25em;
+  color: #f00;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+footer span {
+  font-size: 0.8rem;
+}
+
+input[type=submit] {
+  border: none;
+}
+.btn-back {
+  position: absolute;
+  left: 20px; /* Adjust this value based on your design */
+  top: 20px; /* Adjust this value based on your design */
+  cursor: pointer;
+}
+
+/* ===================
+    login-page
+   =================== */
+.box-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px 0 30px 0;
+  width: 280px;
+  height: 220px;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+.sillhouette {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  width: 100px;
+  height: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background: #666;
+}
+
+.box-field {
+  width: 276px;
+  height: 40px;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+}
+
+.box-user-sill {
+  position: absolute;
+  left: 2px;
+  width: 40px;
+  height: inherit;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  background: #666;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.box-field input[type=text],
+.box-field input[type=password] {
+  width: 228px;
+  height: 40px;
+  border: 0;
+  padding: 0 0 0 48px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-family: 'Be Vietnam', sans-serif;
+  font-weight: 700;
+}
+
+.box-form input[type=submit] {
+  width: 280px;
+  height: 40px;
+  border: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border: 2px solid #666;
+  background: #666;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Be Vietnam', sans-serif;
+  font-weight: 800;
+}
+
+.box-form input[type="checkbox"] {
+  color: #fff;
+}
+
+#invalid-login {
+  display: block;
+  color: red;
+  text-align: center;
+}
+
+
+/* ===================
+    login-page
+   =================== */
+.btn-logout {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 140px;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 21px;
+  transition: all 200ms;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background: #ccc;
+  box-shadow: 0 0 4px #333;
+}
+
+.btn-logout span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: inherit;
+  height: inherit;
+  display: grid;
+  box-sizing: border-box;
+  align-content: center;
+  justify-content: center;
+  padding-right: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-logout div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: inherit;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+}
+
+.box-btn-list {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  height: auto;
+  margin: 100px 0 80px 0;
+}
+
+.box-btn-big {
+  box-sizing: border-box;
+  width: inherit;
+  height: 60px;
+  border: 1px solid #333;
+  margin-bottom: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.box-btn-big:hover,
+.box-btn-big:active {
+  background: #ccc;
+}
+
+.btn-reset {
+  margin: 100px 0 0 0;
+  background: #333;
+  color: #fff;
+}
+
+.btn-reset:hover,
+.btn-reset:active {
+  background: #666;
+}
+
+
+/* ===================
+    Student_page
+   =================== */
+
+.std-course-container {
+  width: 50.25em;
+  box-sizing: border-box;
+  margin: 1.25em auto 0 auto;
+  border-radius: 10px;
+  border: 0.125em solid #333;
+}
+
+.std-Course_page {
+  height: 2.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+.std-Course_page > div:first-of-type {
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.std-course-dept {
+  width: 25em;
+  border: 2px solid #666;
+}
+
+.std-course-cred {
+  width: 25em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid #666;
+}
+
+.std-course-cred > div {
+  height: 2.25em;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 6px;
+}
+
+.std-course-id {
+  width: 5em;
+  background: #ccc;
+}
+
+.std-course-name {
+  width: 19.75em;
+}
+
+.std-course-data > div {
+  height: 1.25em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1.25em 0;
+}
+
+.std-course-attendance-data:nth-of-type(1) {
+  width: 12.5em;
+}
+
+.std-course-attendance-data:nth-of-type(2),
+.std-course-attendance-data:nth-of-type(3) {
+  width: 15.625em;
+}
+
+.std-course-marks-data:nth-of-type(1) {
+  width: 12.5em;
+}
+
+.std-course-marks-data:nth-of-type(2) {
+  width: 15.625em;
+}
+
+.std-course-marks-data:nth-of-type(3) {
+  width: 7.5em;
+}
+
+.std-course-marks-data:nth-of-type(4) {
+  width: 8.125em;
+}
+
+.std-course-data div span:nth-of-type(even) {
+  font-weight: 600;
+  color: #060;
+}
+
+
+/* ===================
+    Instructor_page1
+   =================== */
+
+.btn-course-edit {
+  width: 17.5em;
+  height: 2.5em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 600;
+  color: #fff;
+  background: rgb(139, 143, 127);
+  cursor: pointer;
+}
+
+.ins-course-container {
+  width: 45em;
+  display: flex;
+  flex-direction: row;
+  margin: 1.25em auto;
+}
+
+.ins-course-container > div:nth-of-type(2),
+.ins-course-container > div:nth-of-type(3) {
+  height: 2.5em;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  background: #ccc;
+}
+
+.ins-course-container > div:nth-of-type(2) {
+  width: 120px;
+}
+
+.ins-course-container > div:nth-of-type(3) {
+  width: 100px;
+}
+
+.ins-course-container .std-course-cred {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.ins-course-container .std-course-cred:hover,
+.ins-course-container .std-course-cred:active {
+  box-shadow: 0 0 2px 2px #888;
+}
+
+
+/* ===================
+    Instructor_page2
+   =================== */
+
+.ins-course-edit-container {
+  width: 36.25em;
+  display: flex;
+  flex-direction: row;
+  margin: 1.25em auto;
+}
+
+.ins-course-edit-container > div:nth-of-type(2),
+.ins-course-edit-container > div:nth-of-type(3),
+.ins-course-edit-container > div:nth-of-type(4) {
+  height: 2.5em;
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #666;
+}
+
+.ins-course-edit-container > div:nth-of-type(2) {
+  width: 2.5em;
+  margin-left: 1.25em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ins-course-edit-container > div:nth-of-type(3) {
+  width: 7.5em;
+}
+
+.ins-course-edit-container > div:nth-of-type(4) {
+  width: 2.5em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.line {
+  height: 0.125em;
+  width: 43.75em;
+  margin: auto;
+  background: #999;
+}
+
+.ins-course-edit-label {
+  width: 41.25em;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 1.25em auto;
+}
+
+.ins-course-edit-label span {
+  text-align: center;
+  color: #666;
+  font-weight: 600;
+}
+
+.ins-course-edit-label span:nth-of-type(1) {
+  width: 3.75em;
+  margin-left: 10px;
+}
+
+.ins-course-edit-label span:nth-of-type(2) {
+  width: 5em;
+  margin-left: 10px;
+}
+
+.ins-course-edit-label span:nth-of-type(3) {
+  width: 5em;
+}
+
+.ins-course-edit-course {
+  width: 41.25em;
+  display: flex;
+  flex-direction: row;
+  margin: 1.25em auto;
+}
+
+.ins-course-edit-course .std-course-id {
+  background: rgb(139, 143, 127);
+  width: 6.5em;
+}
+
+.ins-course-edit-course .std-course-name {
+  width: 18.25em;
+}
+
+.ins-course-edit-course > input:nth-of-type(1) {
+  margin-left: 1.75em;
+  margin-right: 0.75em;
+}
+
+.ins-course-edit-course > div:nth-of-type(2),
+.ins-course-edit-course > div:nth-of-type(3) {
+  width: 2.5em;
+  height: 2.5em;
+  box-sizing: border-box;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #eae4e4;
+}
+
+.ins-course-edit-course > input {
+  width: 3.75rem;
+  box-sizing: border-box;
+  margin-left: 1.25rem;
+  text-align: center;
+  font-size: medium;
+}
+
+
+/* ===================
+    Course_page
+   =================== */
+
+.btn-submit {
+  width: 10em;
+  height: 2.5em;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 1.25em auto 1.25em auto;
+  background: #666;
+  color: #fff;
+  cursor: pointer;
+}
+
+.Course_page-container {
+  width: 43.5em;
+  margin: 1.25em auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Course_page-course {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.25em;
+}
+
+.Course_page-course input {
+  font-size: 1rem;
+  border: none;
+  text-align: center;
+}
+
+.Course_page-course > select {
+  width: 17.5rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+  padding: 0 1rem;
+  border: 2px solid #666;
+  font-size: medium;
+}
+
+.Course_page-course > select > option {
+  height: 2.5rem;
+  padding: 0 1rem;
+  font-size: medium;
+}
+
+
+/* ===================
+    Admin_page1
+   =================== */
+
+.admin-buttons {
+  width: 15em;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-admin {
+  width: 15rem;
+  height: 5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: none;
+  background: #666;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.5s ease;
+}
+
+.btn-admin:first-of-type {
+  margin-bottom: 4em;
+}
+
+.btn-admin:last-of-type {
+  margin-top: 1em;
+}
+
+.btn-admin:hover,
+.btn-admin:active {
+  background: #777;
+  box-shadow: 0 0 2px 2px #333;
+}
+
+.admin-uid {
+  width: 100%;
+  height: 2.5rem;
+  border: 2px solid #666;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+}
+
+#invalid-user {
+  display: block;
+  margin-top: 0.5em;
+  color: red;
+  text-align: center;
+}
+
+
+/* ===================
+    Admin_page2
+   =================== */
+
+.Admin_page2-container:first-of-type {
+  margin-top: 2.5em;
+}
+
+.Admin_page2-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1.25em auto;
+}
+
+.Admin_page2-name {
+  width: 28em;
+  height: 2.5em;
+  box-sizing: border-box;
+  border: 2px solid #666;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+}
+
+.Admin_page2-container select {
+  width: 20rem;
+  height: 2.5rem;
+  margin-left: 1.25rem;
+  padding-left: 1em;
+  font-size: 1rem;
+}
+
+
+/* ===================
+    Admin_page3
+   =================== */
+
+.Admin_page3-edit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-type-label {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-person {
+  width: 48em;
+}
+
+.user-person div {
+  text-align: center;
+  font-weight: 600;
+  color: red;
+  margin: 1em 0 2em 0;
+}
+
+.user-person input {
+  height: 2.5rem;
+  width: 11rem;
+  font-size: 1rem;
+  padding: 0 0.75em;
+}
+
+.user-person select {
+  width: 8rem;
+  height: 2.5rem;
+  margin-left: 0.5em;
+  padding-left: 0.5rem;
+}
+
+.label-phone, .label-dept {
+  margin: 1.5em 0 1em 0;
+  font-weight: 600;
+}
+
+.phno {
+  width: 11rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 0 0.75em;
+}
+
+.user-dept-sel {
+  width: 20rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+}
